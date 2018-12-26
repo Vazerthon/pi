@@ -11,6 +11,7 @@
     "babel-preset-env": "^1.7.0"
   },
   "dependencies": {
-    "babel-plugin-transform-object-rest-spread": "^6.26.0"
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "onoff": "^3.2.2"
   }
 }
