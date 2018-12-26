@@ -1,0 +1,16 @@
+{
+  "name": "pi",
+  "version": "1.0.0",
+  "repository": "git@github.com:Vazerthon/pi.git",
+  "scripts": {
+    "start": "babel app.js | node"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0"
+  },
+  "dependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0"
+  }
+}
