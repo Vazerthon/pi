@@ -2,7 +2,13 @@ import { Gpio } from 'onoff'
 
 const pin18 = new Gpio(18, 'out')
 
-const blink = () => pin18.writeSync(pin18.readSync() === 0 ? 0 : 1)
+const say = message => console.log(message)
+
+const blink = () => {
+  const newState = pin18.readSync() === 0 ? 0 : 1;
+  pin18.writeSync(newState)
+  return newState
+}
 
 const stop = () => {
   clearInterval(blinkInterval)
@@ -10,5 +16,10 @@ const stop = () => {
   pin18.unexport()
 }
 
-const blinkInterval = setInterval(blink, 250)
+const app = () => {
+  const state = blink()
+  say(`Turned LED ${state ? 'on' : 'off'}`)
+}
+
+const blinkInterval = setInterval(app, 250)
 setTimeout(stop, 5000)
