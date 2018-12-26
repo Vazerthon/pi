@@ -5,7 +5,7 @@ const pin18 = new Gpio(18, 'out')
 const say = message => console.log(message)
 
 const blink = () => {
-  const newState = pin18.readSync() === 0 ? 0 : 1;
+  const newState = pin18.readSync() === 0 ? 1 : 0;
   pin18.writeSync(newState)
   return newState
 }
