@@ -5,7 +5,8 @@
   "repository": "git@github.com:Vazerthon/pi.git",
   "scripts": {
     "start": "babel app.js | node",
-    "hello-arduino": "babel arduino-hello-world.js | node"
+    "hello-arduino": "babel arduino-hello-world.js | node",
+    "rgb": "babel arduino-rgb.js | node"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
