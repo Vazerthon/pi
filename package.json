@@ -1,9 +1,11 @@
 {
   "name": "pi",
+  "license": "none",
   "version": "1.0.0",
   "repository": "git@github.com:Vazerthon/pi.git",
   "scripts": {
-    "start": "babel app.js | node"
+    "start": "babel app.js | node",
+    "hello-arduino": "babel arduino-hello-world.js | node"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -12,6 +14,7 @@
   },
   "dependencies": {
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "johnny-five": "^1.0.0",
     "onoff": "^3.2.2"
   }
 }
